@@ -1,0 +1,7 @@
+node_modules/
+dist/
+out/
+.profiles/
+public/assets/polyhaven/
+public/bake/
+__pycache__/

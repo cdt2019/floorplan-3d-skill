@@ -1,0 +1,31 @@
+{
+  "name": "floorplan-3d-skill",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5182 --strictPort",
+    "build": "vite build",
+    "shot": "node tools/shot.mjs",
+    "record": "node tools/record.mjs"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.1",
+    "@react-three/postprocessing": "3.1.3",
+    "postprocessing": "6.39.5",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "three": "^0.186.1",
+    "three-gpu-pathtracer": "0.0.26",
+    "three-mesh-bvh": "0.9.15",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@lydell/node-pty": "^1.2.0-beta.15",
+    "@vitejs/plugin-react": "^5.0.0",
+    "@xterm/xterm": "^6.0.0",
+    "vite": "^7.0.0"
+  },
+  "license": "MIT"
+}

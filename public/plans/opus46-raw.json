@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "title": "两室两厅 · 约90m² 户型平面图",
+    "scale": "1:100",
+    "unit": "mm",
+    "totalArea_m2": 90,
+    "northDirection": "up",
+    "coordinateSystem": "原点在西北角（左上），X 向东（右），Y 向南（下）",
+    "overallSize": {
+      "width": 10000,
+      "depth": 9800
+    }
+  },
+  "axes": {
+    "columns": { "1": 0, "2": 3000, "3": 5000, "4": 6000, "5": 10000 },
+    "rows": { "A": 0, "B": 3600, "C": 8400, "D": 9800 },
+    "spans": {
+      "horizontal": { "1-2": 3000, "2-3": 2000, "3-4": 1000, "4-5": 4000, "1-5": 10000 },
+      "vertical": { "A-B": 3600, "B-C": 4800, "C-D": 1400, "A-D": 9800 }
+    }
+  },
+  "rooms": [
+    {
+      "id": "kitchen",
+      "name": "厨房",
+      "nameEn": "Kitchen",
+      "area_m2": 10.8,
+      "bounds": { "xMin": 0, "yMin": 0, "xMax": 3000, "yMax": 3600 },
+      "size": { "width": 3000, "depth": 3600 }
+    },
+    {
+      "id": "bathroom",
+      "name": "卫生间",
+      "nameEn": "Bathroom",
+      "area_m2": 7.2,
+      "bounds": { "xMin": 3000, "yMin": 0, "xMax": 5000, "yMax": 3600 },
+      "size": { "width": 2000, "depth": 3600 }
+    },
+    {
+      "id": "bedroom_secondary",
+      "name": "次卧",
+      "nameEn": "Secondary Bedroom",
+      "area_m2": 18.0,
+      "bounds": { "xMin": 5000, "yMin": 0, "xMax": 10000, "yMax": 3600 },
+      "size": { "width": 5000, "depth": 3600 }
+    },
+    {
+      "id": "living_dining",
+      "name": "客餐厅",
+      "nameEn": "Living & Dining Room",
+      "area_m2": 28.8,
+      "bounds": { "xMin": 0, "yMin": 3600, "xMax": 6000, "yMax": 8400 },
+      "size": { "width": 6000, "depth": 4800 }
+    },
+    {
+      "id": "bedroom_master",
+      "name": "主卧",
+      "nameEn": "Master Bedroom",
+      "area_m2": 19.2,
+      "bounds": { "xMin": 6000, "yMin": 3600, "xMax": 10000, "yMax": 8400 },
+      "size": { "width": 4000, "depth": 4800 }
+    },
+    {
+      "id": "balcony",
+      "name": "阳台",
+      "nameEn": "Balcony",
+      "area_m2": 8.4,
+      "bounds": { "xMin": 0, "yMin": 8400, "xMax": 6000, "yMax": 9800 },
+      "size": { "width": 6000, "depth": 1400 }
+    }
+  ],
+  "walls": [
+    { "id": "W-N",   "type": "exterior", "label": "北外墙",          "from": [0, 0],      "to": [10000, 0] },
+    { "id": "W-E",   "type": "exterior", "label": "东外墙",          "from": [10000, 0],  "to": [10000, 8400] },
+    { "id": "W-S1",  "type": "exterior", "label": "主卧南外墙",       "from": [10000, 8400], "to": [6000, 8400] },
+    { "id": "W-BE",  "type": "exterior", "label": "阳台东外墙",       "from": [6000, 8400],  "to": [6000, 9800] },
+    { "id": "W-S2",  "type": "exterior", "label": "阳台南外墙",       "from": [6000, 9800],  "to": [0, 9800] },
+    { "id": "W-W",   "type": "exterior", "label": "西外墙",          "from": [0, 9800],    "to": [0, 0] },
+
+    { "id": "W-I1",  "type": "interior", "label": "厨房–卫生间隔墙",   "from": [3000, 0],   "to": [3000, 3600] },
+    { "id": "W-I2",  "type": "interior", "label": "卫生间–次卧隔墙",   "from": [5000, 0],   "to": [5000, 3600] },
+    { "id": "W-I3",  "type": "interior", "label": "南北分区横墙（含走道）","from": [0, 3600],   "to": [10000, 3600] },
+    { "id": "W-I4",  "type": "interior", "label": "客餐厅–主卧隔墙",   "from": [6000, 3600], "to": [6000, 8400] },
+    { "id": "W-I5",  "type": "interior", "label": "客餐厅–阳台隔墙",   "from": [0, 8400],   "to": [6000, 8400] }
+  ],
+  "doors": [
+    {
+      "id": "D1",
+      "name": "入户门",
+      "nameEn": "Entrance Door",
+      "type": "swing",
+      "wall": "W-W",
+      "position": { "x": 0, "yStart": 3200, "yEnd": 4200 },
+      "width": 1000,
+      "swingDirection": "east",
+      "connects": ["outside", "living_dining"]
+    },
+    {
+      "id": "D2",
+      "name": "厨房门",
+      "nameEn": "Kitchen Door",
+      "type": "swing",
+      "wall": "W-I3",
+      "position": { "y": 3600, "xStart": 1800, "xEnd": 2600 },
+      "width": 800,
+      "swingDirection": "south",
+      "connects": ["kitchen", "living_dining"]
+    },
+    {
+      "id": "D3",
+      "name": "卫生间门",
+      "nameEn": "Bathroom Door",
+      "type": "swing",
+      "wall": "W-I3",
+      "position": { "y": 3600, "xStart": 3800, "xEnd": 4500 },
+      "width": 700,
+      "swingDirection": "south",
+      "connects": ["bathroom", "living_dining"]
+    },
+    {
+      "id": "D4",
+      "name": "次卧门",
+      "nameEn": "Secondary Bedroom Door",
+      "type": "swing",
+      "wall": "W-I3",
+      "position": { "y": 3600, "xStart": 5100, "xEnd": 6000 },
+      "width": 900,
+      "swingDirection": "north",
+      "connects": ["living_dining", "bedroom_secondary"]
+    },
+    {
+      "id": "D5",
+      "name": "主卧门",
+      "nameEn": "Master Bedroom Door",
+      "type": "swing",
+      "wall": "W-I4",
+      "position": { "x": 6000, "yStart": 3800, "yEnd": 4700 },
+      "width": 900,
+      "swingDirection": "east",
+      "connects": ["living_dining", "bedroom_master"]
+    },
+    {
+      "id": "D6",
+      "name": "阳台推拉门",
+      "nameEn": "Balcony Sliding Door",
+      "type": "sliding",
+      "wall": "W-I5",
+      "position": { "y": 8400, "xStart": 1500, "xEnd": 4500 },
+      "width": 3000,
+      "connects": ["living_dining", "balcony"]
+    }
+  ],
+  "windows": [
+    {
+      "id": "WIN1",
+      "name": "厨房北窗",
+      "nameEn": "Kitchen North Window",
+      "wall": "W-N",
+      "position": { "y": 0, "xStart": 600, "xEnd": 2400 },
+      "width": 1800,
+      "room": "kitchen"
+    },
+    {
+      "id": "WIN2",
+      "name": "次卧北窗",
+      "nameEn": "Secondary Bedroom North Window",
+      "wall": "W-N",
+      "position": { "y": 0, "xStart": 6800, "xEnd": 9200 },
+      "width": 2400,
+      "room": "bedroom_secondary"
+    },
+    {
+      "id": "WIN3",
+      "name": "主卧南窗",
+      "nameEn": "Master Bedroom South Window",
+      "wall": "W-S1",
+      "position": { "y": 8400, "xStart": 7200, "xEnd": 9600 },
+      "width": 2400,
+      "room": "bedroom_master"
+    }
+  ]
+}
